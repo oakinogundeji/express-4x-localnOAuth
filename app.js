@@ -29,7 +29,6 @@ var
   sessStore,
   db,
   userRoutes = require('./routes/root'),
-  bookRoutes = require('./routes/books'),
   twitterRoutes = require('./routes/twitter'),
   fbRoutes = require('./routes/facebook');
 //==============================================================================
@@ -88,7 +87,6 @@ app.get('/test', function (req, res) {
   return res.status(200).json('All\'s well!!');
 });
 app.use('/', userRoutes);
-app.use('/books', bookRoutes);
 app.use('/twitter', twitterRoutes);
 app.use('/facebook', fbRoutes);
 //==============================================================================
