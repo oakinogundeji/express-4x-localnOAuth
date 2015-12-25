@@ -1,7 +1,7 @@
 {
-  "name": "simple-library",
+  "name": "express-local-oauth",
   "version": "1.0.0",
-  "description": "A simple library app developed by using the coding by the book method",
+  "description": "A simple express app for demonstrating local and oauth with passport",
   "main": "server.js",
   "browserify": {
     "transform": [
