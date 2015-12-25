@@ -30,7 +30,6 @@
     "express-ejs-layouts": "^2.0.0",
     "express-session": "^1.12.1",
     "facebook-node-sdk": "^0.2.0",
-    "jquery": "^2.1.4",
     "mongoose": "^4.3.0",
     "passport": "^0.3.2",
     "passport-facebook": "^2.0.0",
