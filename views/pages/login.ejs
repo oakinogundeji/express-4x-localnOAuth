@@ -1,0 +1,15 @@
+<!--from /views/pages/login -->
+<h1><span class="fa fa-lock"></span> Login</h1>
+<h3>Login with your email and password</h3>
+<form action="/login" method="post">
+  <input type="email" name="email" placeholder="email" required>
+  <input type="password" name="password" placeholder="password" required>
+  <input class="btn btn-success" type="submit" value="Login!">
+</form>
+<div>
+  <h3>Login with social networks</h3>
+  <a href="/auth/twitter" class="btn btn-primary btn-default">
+    <span class="fa fa-twitter"></span> Twitter</a>
+  <a href="/auth/facebook" class="btn btn-primary btn-default">
+    <span class="fa fa-facebook"></span> Facebook</a>
+</div>

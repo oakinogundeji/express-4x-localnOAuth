@@ -1,0 +1,12 @@
+<div>
+  <figure v-show="userPhoto"><img :src="userPhoto" :alt="person + ' photo'"></figure>
+  <div>
+    <h3>Welcome '{{{person}}}', your present profile is '{{currentProfile}}'</h3>
+  </div>
+  <div>
+    <h3 v-show="hideLinkAcct">Link your other accounts to your profile</h3>
+    <p v-show="hideLocalLink"><a href="/connect/local">Local: Status ({{localLinkStatus}})</a></p>
+    <p v-show="hideFBLink"><a href="/connect/facebook">Facebook: Status ({{fbLinkStatus}})</a></p>
+    <p v-show="hideTwitterLink"><a href="/connect/twitter">Twitter: Status ({{twitterLinkStatus}})</a></p>
+  </div>
+</div>

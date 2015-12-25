@@ -1,0 +1,22 @@
+<div>
+  <h3>Profile Name: Facebook</h3>
+  <template v-if="showBlock">
+    <p>Details</p>
+    <ul>
+      <li v-for="value in details">{{$key}}: {{{value}}}</li>
+    </ul>
+    <div>
+      <button @click.prevent.stop="getPosts"
+      class="btn btn-primary btn-large">Get Recent Posts</button>
+      <span v-show="showLoading">Loading...</span>
+      <ul v-show="showPosts" class="list-group">
+        <li v-for="item in posts" class="list-group-item">
+          <div class="well">
+            <p v-show="item.message.length">Message: {{item.message}}</p>
+            <p v-show="item.story.length">Story: {{item.story}}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </template>
+</div>

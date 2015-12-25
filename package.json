@@ -1,0 +1,52 @@
+{
+  "name": "simple-library",
+  "version": "1.0.0",
+  "description": "A simple library app developed by using the coding by the book method",
+  "main": "server.js",
+  "browserify": {
+    "transform": [
+      "partialify"
+    ]
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test",
+    "start": "npm run build && node server.js",
+    "start-dev": "nodemon server.js",
+    "build": "browserify -t partialify ./public/js/app.js -o ./public/js/main.js",
+    "watch": "watchify -t partialify ./public/js/app.js -o ./public/js/main.js -dv"
+  },
+  "author": "Telios WebDev",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.14.1",
+    "browserify": "^12.0.1",
+    "connect-mongo": "^0.8.2",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "express-ejs-layouts": "^2.0.0",
+    "express-session": "^1.12.1",
+    "facebook-node-sdk": "^0.2.0",
+    "jquery": "^2.1.4",
+    "mongoose": "^4.3.0",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "passport-twitter": "^1.0.3",
+    "twit": "^2.1.1",
+    "vue": "^1.0.13",
+    "vue-resource": "^0.5.1"
+  },
+  "devDependencies": {
+    "clarify": "^1.0.5",
+    "faker": "^3.0.1",
+    "morgan": "^1.6.1",
+    "partialify": "^3.1.5",
+    "should": "^8.0.1",
+    "supertest": "^1.1.0",
+    "watchify": "^3.6.1"
+  }
+}

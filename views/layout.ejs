@@ -1,0 +1,18 @@
+<!--from /views/layout -->
+<!DOCTYPE html>
+<head>
+  <% include ./partials/head %>
+  <%-defineContent('dashboard header')%>
+</head>
+<body>
+  <header class="container-fluid">
+      <% include ./partials/header %>
+  </header>
+  <main class="container-fluid">
+      <%- body%>
+      <%-defineContent('dashboard body')%>
+  </main>
+  <footer class="container-fluid">
+    <% include ./partials/footer %>
+  </footer>
+</body>

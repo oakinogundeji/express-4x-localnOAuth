@@ -1,0 +1,16 @@
+<!--from /views/pages/signup -->
+<h1><span class="fa fa-sign-in"></span> Signup</h1>
+<h3>Signup with your username, email and password!</h3>
+<form action="/Signup" method="post">
+  <input type="text" name="username" placeholder="username" required>
+  <input type="email" name="email" placeholder="email" required>
+  <input type="password" name="password" placeholder="password" required>
+  <input class="btn btn-success" type="submit" value="Signup!">
+</form>
+<div>
+  <h3>Signup with social networks</h3>
+  <a href="/auth/twitter" class="btn btn-primary btn-default">
+    <span class="fa fa-twitter"></span> Twitter</a>
+  <a href="/auth/facebook" class="btn btn-primary btn-default">
+    <span class="fa fa-facebook"></span> Facebook</a>
+</div>

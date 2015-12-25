@@ -1,0 +1,24 @@
+<div>
+  <h3>Profile Name: Twitter</h3>
+  <template v-if="showBlock">
+    <p>Details</p>
+    <ul>
+      <li v-for="value in details">{{$key}}: {{value}}</li>
+    </ul>
+    <div>
+      <button @click.prevent.stop="getTweets"
+      class="btn btn-primary btn-large">Get Recent timeline activity</button>
+      <span v-show="showLoading">Loading...</span>
+      <ul v-show="showTimeLine" class="list-group">
+        <li v-for="item in timeline" class="list-group-item">
+          <div class="well">
+            <figure><img :src="item.photo" alt="{{item.sender}} photo" /></figure>
+            <p>Sender: {{item.sender}}</p>
+            <p>Location: {{item.location}}</p>
+            <p>Tweet: {{item.text}}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </template>
+</div>

@@ -1,0 +1,95 @@
+<!--from /views/pages/dashboard -->
+<%- contentFor('dashboard header') %>
+<!--The following corrects FB callback frag-->
+<script type="text/javascript">
+  if (window.location.hash && window.location.hash == '#_=_') {
+      window.location.hash = '';
+    }
+</script>
+
+<%- contentFor('dashboard body') %>
+<!--Main app structure -->
+  <div id="app" class="col-md-9">
+    <div class="row">
+      <app-nav class="col-md-9"></app-nav>
+    </div>
+    <div class="row">
+      <component :is="currentPage" keep-alive
+        class="col-md-9"></component>
+    </div>
+    <pre>{{$data | json}}</pre>
+  </div>
+
+  <script>
+    var
+      person = '<%= person%>',
+      currentProfile = '<%= currentProfile%>',
+      userPhoto = '<%= user.photo%>',
+      localEmail = '<%= user.local.email%>',
+      localUser = '<%= user.local.username%>',
+      fbName = '<%= user.fb.displayName%>',
+      fbEmail = '<%= user.fb.email%>',
+      fbAccessToken = '<%= user.fb.accessToken%>',
+      twitterHandle = '<%= user.twitter.handle%>',
+      twitterLocation = '<%= user.twitter.location%>',
+      twitterDescription = '<%= user.twitter.description%>',
+      localLinkStatus = '<%= linkStatus.local%>',
+      fbLinkStatus = '<%= linkStatus.fb%>',
+      twitterLinkStatus = '<%= linkStatus.twitter%>',
+      hideLinkAcct = function() {
+        if(localLinkStatus == 'linked' && fbLinkStatus == 'linked' &&
+         twitterLinkStatus == 'linked') {
+           return false;
+         }
+         else {
+           return true;
+         }
+      }(),
+      hideLocalLink = function () {
+        if(localLinkStatus == 'linked') {
+          return false;
+        }
+        else {
+          return true;
+        }
+      }(),
+      hideFBLink = function () {
+        if(fbLinkStatus == 'linked') {
+          return false;
+        }
+        else {
+          return true;
+        }
+      }(),
+      hideTwitterLink = function () {
+        if(twitterLinkStatus == 'linked') {
+          return false;
+        }
+        else {
+          return true;
+        }
+      }();
+    window.appUserData = {
+      person: person,
+      currentProfile: currentProfile,
+      userPhoto: userPhoto,
+      localEmail: localEmail,
+      localUser: localUser,
+      fbName: fbName,
+      fbEmail: fbEmail,
+      fbAccessToken: fbAccessToken,
+      twitterHandle: twitterHandle,
+      twitterLocation: twitterLocation,
+      twitterDescription: twitterDescription,
+      localLinkStatus: localLinkStatus,
+      fbLinkStatus: fbLinkStatus,
+      twitterLinkStatus: twitterLinkStatus,
+      hideLinkAcct: hideLinkAcct,
+      hideLocalLink: hideLocalLink,
+      hideFBLink: hideFBLink,
+      hideTwitterLink: hideTwitterLink
+    };
+
+  </script>
+
+  <script src="js/main.js"></script>

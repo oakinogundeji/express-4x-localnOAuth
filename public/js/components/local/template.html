@@ -1,0 +1,9 @@
+<div>
+  <h3>Profile Name: Local</h3>
+  <template v-if="showBlock">
+    <p>Details</p>
+    <ul>
+      <li v-for="value in details">{{$key}}: {{value}}</li>
+    </ul>
+  </template>
+</div>
