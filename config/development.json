@@ -5,15 +5,15 @@
   "dbURL": "mongodb://localhost/simpleLib",
   "sessionSecret": "qwertyuiop123456789",
   "fb": {
-    "appID": "1725335461028228",
-    "appSecret": "101ed418299489a1d5ab945ae11f1911",
+    "appID": "",
+    "appSecret": "",
     "callbackURL": "http://127.0.0.1:3030/auth/facebook/callback"
   },
   "twitter": {
-    "consumerKey": "IlQwm7kFm1VyhiqVyqmMbElSg",
-    "consumerSecret": "92bJnJUhGKhGDJIBgHzIV0OTZ8X7yYymOj2Ur85XmVNxTEm8F5",
-    "accessTokenKey": "68970848-ynGqlsW7mzrTQpwxzutaqlHl0KZ55Djiu3IY4ndF8",
-    "accessTokenSecret": "BwiDQTLkxAoRDVjhLREmtjsZQGBvxfl4GwV3MnBlSvUk4",
+    "consumerKey": "",
+    "consumerSecret": "",
+    "accessTokenKey": "",
+    "accessTokenSecret": "",
     "callbackURL": "http://127.0.0.1:3030/auth/twitter/callback"
   }
 }

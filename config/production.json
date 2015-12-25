@@ -1,17 +1,17 @@
 {
-  "host": "127.0.0.1",
-  "liveURL": "http://127.0.0.1:3030",
+  "host": "",
+  "liveURL": "",
   "env": "production",
-  "dbURL": "mongodb://localhost/simpleLibLive",
-  "sessionSecret": "qwertyuiop123456789",
+  "dbURL": "",
+  "sessionSecret": "",
   "fb": {
-      "appID": "12",
-      "appSecret": "34",
-      "callbackURL": "http://localhost:3030/auth/facebook/callback"
+      "appID": "",
+      "appSecret": "",
+      "callbackURL": ""
     },
   "twitter": {
-    "consumerKey": "12",
-    "consumerSecret": "34",
-    "callbackURL": "http://127.0.0.1:3030/auth/twitter/callback"
+    "consumerKey": "",
+    "consumerSecret": "",
+    "callbackURL": ""
   }
 }
