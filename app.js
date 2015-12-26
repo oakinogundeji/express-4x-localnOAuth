@@ -30,8 +30,8 @@ var
   db,
   userRoutes = require('./routes/root'),
   twitterRoutes = require('./routes/twitter'),
-  fbRoutes = require('./routes/facebook'),
-  app.locals.errMsg = app.locals.errMsg || null;
+  fbRoutes = require('./routes/facebook');
+app.locals.errMsg = app.locals.errMsg || null;
 //==============================================================================
 /**
 *Config and settings
