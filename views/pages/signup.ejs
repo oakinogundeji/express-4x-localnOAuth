@@ -1,5 +1,8 @@
 <!--from /views/pages/signup -->
 <h1><span class="fa fa-sign-in"></span> Signup</h1>
+<% if(errMsg) {%>
+  <p><%- errMsg%></p>
+<%}%>
 <h3>Signup with your username, email and password!</h3>
 <form action="/Signup" method="post">
   <input type="text" name="username" placeholder="username" required>

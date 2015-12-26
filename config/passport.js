@@ -108,7 +108,7 @@ passport.use('local-login', new LocalStrategy({
           }
         if(!user) {
           return done(null, false, {errMsg: 'User does not exist, please' +
-          ' <a href="/signup">signup</a>'});
+          ' <a class="errMsg" href="/signup">signup</a>'});
           }
         if(!user.validPassword(password)) {
           return done(null, false, {errMsg: 'Invalid password try again'});
