@@ -1,7 +1,7 @@
 <!--from /views/pages/login -->
 <h1><span class="fa fa-lock"></span> Login</h1>
 <% if(errMsg) {%>
-  <p><%- errMsg%></p>
+  <p class="errMsg"><%- errMsg%></p>
 <%}%>
 <h3>Login with your email and password</h3>
 <form action="/login" method="post">
