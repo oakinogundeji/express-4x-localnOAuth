@@ -58,8 +58,6 @@ var vm = new Vue({
   data: {
     currentPage: 'app-profile'
   },
-  computed: {},
-  methods: {},
   events: {
     'setpage': function (page) {
       if(page == 'profile') {
